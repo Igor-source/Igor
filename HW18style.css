@@ -1,0 +1,112 @@
+/* body{
+    text-align: center;
+
+
+}
+@keyframes movebox {
+    0% { left: 0;} 
+    100% { left: 400px;} 
+}
+@-webkit-keyframes movebox {
+    0% { left: 0;} 
+    100% { left: 400px;} 
+}
+.box{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    position: absolute;
+    top: 30%;
+    -webkit-animation: movebox 5s alternate infinite;
+    animation: movebox 5s alternate infinite;	
+}
+
+@keyframes movebox {
+    0% { opacity: 1; transform: scale(1); left: 0;}
+    50% {transform: scale(1.1) rotate(-360deg) ; left: 200px;}
+    100% { opacity: 1; transform: scale(1.4) rotate(360deg); left: 400px; background: red;}
+}
+ */
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.animation-block{
+    margin: 30px auto;
+    width: 300px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: midnightblue;
+}
+.waves{
+    background: lightseagreen;
+    height: 80px;
+    width: 120%;
+    position: absolute;
+    left: -40px;
+    bottom: -20px;
+    z-index: 2;
+    animation: waves 2s linear alternate infinite;
+}
+.wave{
+    width: 25%;
+    height: 30px;
+    background:lightseagreen;
+    border-radius: 50%;
+    margin-top: -12px;
+    float: left ;
+}
+@keyframes waves{
+	0%{transform: translate(0,0);}
+	50%{transform: translate(20px,-10px);}
+	100%{transform: translate(40px, 0);}
+}
+.boat{
+    width: 200px;
+    height: 40px;
+    background: brown;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    z-index: 1;
+    animation: boat 2s linear alternate infinite;
+
+}
+@keyframes boat{
+	0%{transform: rotate(-3deg);}
+	50%{transform: rotate(0deg);}
+	100%{transform: rotate(3deg);}
+}
+.star{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    -webkit-box-shadow: 0 0 5px 0 rgba(255,255,255,1);
+    -moz-box-shadow:0 0 5px 0 rgba(255,255,255,1);
+    box-shadow:0 0 5px 0 rgba(255,255,255,1);
+    animation: star 1s alternate infinite;
+}
+.st1{left:10%; top: 10%;}
+.st2{left:25%; top: 15%;}
+.st3{left:40%; top: 12%;}
+.st4{left:65%; top: 8%;}
+.st5{left:88%; top: 11%;}
+.st6{left:22%; top: 20%;}
+.st7{left:55%; top: 18%;}
+.st8{left:70%; top: 21%;}
+.st9{left:7%; top: 16%;}
+.st10{left:90%; top: 19%;}
+
+@keyframes star{
+	0%{transform: scale(1.5);}	
+	100%{transform: scale(2);}
+}
+.anim1{animation-duration: 1s;}
+.anim2{animation-duration: 1.5s;}
+.anim3{animation-duration: 2s;}
